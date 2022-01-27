@@ -1,0 +1,12 @@
+# To Do
+- profile php code to find bottlenecks
+- consider modernizr.js
+- Improve breadcrumbs on archive pages.
+
+# Resources
+- https://developer.wordpress.org/themes/getting-started/
+- suggestions for test can be found at https://codex.wordpress.org/Theme_Unit_Test
+- https://codex.wordpress.org/Site_Design_and_Layout
+- https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/
+- https://developer.wordpress.org/coding-standards/wordpress-coding-standards/javascript/
+- https://developer.wordpress.org/coding-standards/wordpress-coding-standards/html/

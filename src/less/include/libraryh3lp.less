@@ -1,0 +1,100 @@
+/**
+ * Libraryh3lp
+ * ============================================================================
+ *
+ * Modifications to these styles for large screens can be found in
+ * libraryh3lp-wide.less.
+ */
+
+/**
+ * We position the widget in the lower right corner where it floats above other
+ * content.
+ */
+.chat-widget {
+  position: fixed;
+  z-index: @layers[libraryh3lp];
+  bottom: 0.2em;
+  right: 0.2em;
+  padding: 0 0.25em;
+  font-size: 200%;
+  border: solid;
+  border-radius: 1em;
+  background: white;
+
+  @media (prefers-color-scheme: dark) {
+    background: @colors[forbes-green];
+  }
+
+  &.chat-available,
+  &.chat-available :any-link {
+    color: @colors[forbes-red];
+    border-color: @colors[forbes-red];
+
+    @media (prefers-color-scheme: dark) {
+      color: #fff;
+      border-color: #fff;
+    }
+
+    &:hover {
+      background-color: #ffed8a;
+
+      @media (prefers-color-scheme: dark) {
+        background-color: @colors[bright-green];
+      }
+    }
+  }
+
+  /**
+   * When chat is offline or loading we style the widget to indicate its
+   * "disabled" state.
+   */
+  &.chat-offline,
+  &.chat-loading {
+    color: #d3d3d3;
+    border-color: #d3d3d3;;
+
+    :any-link {
+      color: #d3d3d3;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      background-color: #555;
+      color: #777;
+      border-color: #777;
+
+      :any-link {
+        color: #777;
+      }
+    }
+  }
+
+  &:focus-within {
+    box-shadow: 0 0 0 0.2em gold;
+  }
+
+  & a:focus {
+    outline: none;
+  }
+}
+
+/**
+ * Presence check classes
+ *
+ * These classes can be used to show or hide content based on whether chat is
+ * available.
+ */
+.show-if-chat-available {
+  display: none;
+
+  body.chat-available & {
+    display: initial;
+  }
+}
+
+.show-if-chat-offline {
+  display: none;
+
+  body.chat-offline & {
+    display: initial;
+  }
+}

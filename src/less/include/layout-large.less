@@ -1,0 +1,68 @@
+/**
+ * Layout - Large
+ * ============================================================================
+ *
+ * Modifications to the layout for larger screens – tablets and desktop
+ * computers will generally recieve these styles.
+ *
+ * On medium sized screens we don't have room for a sidebar on the left and the
+ * right, so we will will position the sidebars one above each other on the
+ * right
+ */
+
+:root {
+  --body-padding-vertical: 3rem;
+  --body-padding-horizontal: 3rem;
+}
+
+body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) fit-content(17em);
+  grid-template-rows: auto auto auto 1fr;
+  grid-template-areas:
+    "alerts alerts"
+    "head head"
+    "main right-1"
+    "main right-2"
+    "foot foot";
+}
+
+#alerts {
+  grid-area: alerts;
+  margin:
+    calc(-1 * var(--body-padding-vertical))
+    calc(-1 * var(--body-padding-horizontal))
+    1em;
+
+  .post {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+#main {
+  grid-area: main;
+}
+
+#page-header {
+  grid-area: head;
+}
+
+#page-footer {
+  grid-area: foot;
+  margin: 1.5em 0 0;
+}
+
+body > .widget-area {
+  width: 17em;
+}
+
+body > .widget-area-left {
+  grid-area: right-1;
+  margin: 1em 0 0 3em;
+}
+
+body > .widget-area-right {
+  grid-area: right-2;
+  margin: 1em 0 0 3em;
+}

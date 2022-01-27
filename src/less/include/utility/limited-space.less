@@ -1,0 +1,27 @@
+/**
+ * Limited Space
+ *
+ * A mixin to apply alternative top and bottom padding when vertical space is
+ * limited. This adds media query noise to the stylesheet and should be used
+ * sparingly.
+ */
+
+/**
+ * Single Dimentsion
+ */
+.limited-vertical-space-padding(@dimension) {
+  @media (max-height: 40em) {
+    padding-top: @dimension;
+    padding-bottom: @dimension;
+  }
+}
+
+/**
+ * Seperate Top and Bottom Dimension
+ */
+.limited-vertical-space-padding(@top-dimension, @bottom-dimension) {
+  @media (max-height: 40em) {
+    padding-top: @top-dimension;
+    padding-bottom: @bottom-dimension;
+  }
+}

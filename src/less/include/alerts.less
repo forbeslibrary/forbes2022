@@ -1,0 +1,85 @@
+/**
+ * Alerts
+ * ============================================================================
+ *
+ * Styles for the alerts that are displayed at the top of the theme.
+ */
+#alerts {
+  margin:
+    calc(-1 * var(--body-padding-vertical))
+    calc(-1 * var(--body-padding-horizontal))
+    0;
+
+  .post {
+    padding: 0.75em 1em;
+    .limited-vertical-space-padding(0);
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .category-alerts {
+    display: grid;
+    grid-template-areas: "body read-more admin";
+    grid-template-columns: auto min-content min-content;
+    column-gap: 1em;
+    overflow: hidden;
+    box-shadow: 0 0 0 0.1em #fff;
+
+    @media (prefers-color-scheme: dark) {
+      box-shadow: 0 0 0 0.1em #bbb;
+    }
+
+    .alert-content {
+      grid-area: body;
+      align-self: center;
+    }
+
+    .read-more {
+      grid-area: read-more;
+      align-self: center;
+      padding: 0.5em 0.75em;
+      margin: -0.5em 0;
+      border-radius: 2em;
+      white-space: nowrap;
+      border: solid 0.125em #fff9;
+      font-weight: 700;
+      display: inline-block;
+    }
+
+    .admin {
+      grid-area: admin;
+      align-self: start;
+    }
+  }
+
+  /**
+   * Although we call this a "blue alert" we are using the teal/green color
+   * from our branding. The message is the same (this is a non-urgent notice)
+   * and it reinforces our brand.
+   */
+  .category-blue {
+    color: #fff;
+    background-color: @colors[forbes-green];
+
+    :link,
+    :visited {
+      color: #fff;
+    }
+  }
+
+  /**
+   Using #f00 for a brighter red is tempting, but doesn't provide enough
+   contrast and will fail accessibility audits
+   */
+  .category-red {
+    color: #fff;
+    background-color: #d00;
+
+    :link,
+    :visited {
+      color: #fff;
+    }
+  }
+}

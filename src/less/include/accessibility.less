@@ -1,0 +1,60 @@
+/**
+ * Accessibility
+ * ============================================================================
+ */
+
+/**
+ * Give all focused element a highly visible outline
+ */
+:focus {
+  outline: solid gold 2px;
+  z-index: @layers[focus];
+}
+
+/**
+ * Use the pointer cursor for all buttons and labels.
+ */
+button,
+label {
+  cursor: pointer;
+}
+
+/**
+ * A class for hiding text while keeping it accessible for screen readers.
+ * Focusable elements will shown on screen when focused, which is helpful for
+ * sighted users navigating with a keyboard.
+ */
+.screen-reader-text {
+  color: black;
+  background-color: white;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+
+  &:link {
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    clip: auto !important;
+    clip-path: none;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 1em;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    top: 1em;
+    width: auto;
+    z-index: @layers[screen-reader];
+    box-shadow: 0.5em 0.5em 1em 0.25em #0008;
+    border-radius: 1em;
+    outline-width: thick;
+  }
+}

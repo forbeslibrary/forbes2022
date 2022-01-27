@@ -1,0 +1,95 @@
+/**
+ * Menu - Large
+ * ============================================================================
+ *
+ * We substantially modify the menu on large screens. We no longer show and hide
+ * the menu. Instead we always show the top level headings, and submenus drop
+ * down on hover or focus.
+ */
+
+/**
+ * We don't need the heading on large screens, where the fact that this is a
+ * menu should be self-evident.
+ */
+#top-menu-heading {
+  display: none;
+}
+
+/**
+ * We don't need the menu toggle checkbox on large screens
+ */
+#top-menu-toggle {
+  display: none;
+}
+
+/**
+ * We extensively restyle the menu so that it has a horizontal layout and
+ * drop-down submenus.
+ */
+#top-menu {
+  display: block; /* show the menu (it was hidden by default) */
+  width: 100%;
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+
+  a {
+    text-decoration: none;
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-item {
+    list-style: none;
+    line-height: 3;
+
+    a {
+      display: block;
+      padding: 0 0.66em;
+    }
+
+    &:hover,
+    &:focus-within {
+      background-color: #ccc;
+
+      @media (prefers-color-scheme: dark) {
+        background-color: #555;
+      }
+    }
+  }
+
+  &:not(:focus-within) .menu-item:hover .sub-menu,
+  .menu-item:focus-within .sub-menu {
+    display: block;
+  }
+
+  .sub-menu {
+    display: none;
+    box-shadow: 0 1em 1em rgb(0 0 0 / 30%);
+    padding: 0;
+    position: absolute;
+    z-index: @layers[sub-menus];
+
+    .menu-item {
+      line-height: 2;
+    }
+
+    background-color: #fff;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: #222;
+    }
+  }
+
+  /*
+   * Why such specificity? Because we we had a rule with the same selector in
+   * menu style for smaller screens.
+   */
+  & > .menu > .menu-item {
+    margin: 0;
+  }
+}

@@ -1,0 +1,52 @@
+/**
+ * Colors
+ * ============================================================================
+ *
+ * Colors for the block-editor
+ */
+
+
+
+/**
+ * .has- rules for the block editor
+ */
+.has-black-color {
+  color: #000;
+}
+
+.has-black-background-color {
+  background-color: #000;
+  color: #fff;
+
+  &.has-text-color {
+    color: #fff; /* force white text when using this dark background */
+  }
+}
+
+.has-forbes-red-color {
+  color: @colors[forbes-red];
+}
+
+.has-forbes-red-background-color {
+  background-color: @colors[forbes-red];
+  color: #fff;
+
+  &.has-text-color,
+  &:any-link {
+    color: #fff; /* force white text when using this dark background */
+  }
+}
+
+.has-forbes-green-color {
+  color: @colors[forbes-green];
+}
+
+.has-forbes-green-background-color {
+  background-color: @colors[forbes-green];
+  color: #fff;
+
+  &.has-text-color,
+  &:any-link {
+    color: #fff; /* force white text when using this dark background */
+  }
+}

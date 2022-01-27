@@ -1,0 +1,66 @@
+/**
+ * WordPress Style
+ * ============================================================================
+ *
+ * These styles add decoration or formatting to classes used by WordPress.
+ */
+
+/**
+ * The .align classes mostly share the same base definition and will be
+ * diferentiated on larger devices.
+ */
+.aligncenter,
+.alignleft,
+.alignright {
+  float: none;
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 1em;
+}
+
+/**
+ * Elements with the alignwide class will always take up the full width of the
+ * parent.
+ */
+.alignwide {
+  width: 100%;
+}
+
+/**
+ * Makes sure the captions in galleries do not block linked images
+ */
+.blocks-gallery-item figcaption {
+  pointer-events: none;
+}
+
+/**
+ * Decorate sticky posts, so that they stand out.
+ */
+.sticky {
+  border-top: solid #000 0.1em;
+  border-bottom: solid #000 0.1em;
+  padding: 0.75em 1.5em;
+  box-shadow: 0 0 1em #000;
+  margin-bottom: 1.5em;
+}
+
+/**
+ * The wp-caption class is used as a wrapper not just around the caption but
+ * around the captioned image as well.
+ */
+.wp-caption > * {
+  display: block;
+  margin: 0 auto;
+}
+
+/**
+ * This wp-caption-text class is applied to the caption itself.
+ */
+.wp-caption-text {
+  padding: 0 1em 1em 1em;
+  margin-top: 0;
+  text-align: center;
+  font-size: 75%;
+  font-style: italic;
+  color: #333;
+}

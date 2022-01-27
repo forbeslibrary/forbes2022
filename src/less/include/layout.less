@@ -1,0 +1,31 @@
+/**
+ * Layout
+ * ============================================================================
+ */
+
+@import (reference) "utility/buttons.less";
+@import (reference) "utility/limited-space.less";
+@import (reference) "utility/sticky-fix.less";
+
+:root {
+  --body-padding-vertical: 2rem;
+  --body-padding-horizontal: 2rem;
+}
+
+body {
+  margin: 0;
+  padding: var(--body-padding-vertical) var(--body-padding-horizontal);
+  display: flex; /* ensure white space doesn't create gaps between elements */
+  flex-direction: column;
+}
+
+/**
+ * We make the footer fill the width of the screen. We will override this on
+ * larger screens.
+ */
+#page-footer {
+  margin:
+    0.75em
+    calc(-1 * var(--body-padding-horizontal))
+    calc(-1 * var(--body-padding-vertical));
+}

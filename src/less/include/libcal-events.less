@@ -1,0 +1,60 @@
+/**
+ * LibCal Events
+ * ============================================================================
+ *
+ * Styles for events brought in with the LibCal upcoming events widget.
+ */
+
+/**
+ * The LibCal Institution ID and Calendar ID are used in the ID of the div
+ * created by the upcoming events widget.
+ */
+@institution-id: 1448;
+@calendar-id: 228;
+
+/**
+ * Libcal class names.
+ *
+ * The class names output by the upcoming events widget our arcane–using these
+ * definitions makes for more readable code.
+ */
+@libcal-widget-heading:    s-lc-ea-h3;
+@libcal-table-heading:     s-lc-ea-l;
+@libcal-event:             s-lc-ea-tb;
+@libcal-event-categories:  s-lc-ea-tcat;
+@libcal-event-description: s-lc-ea-tdes;
+@libcal-event-date:        s-lc-ea-tdat;
+@libcal-event-location:    s-lc-ea-tloc;
+@libcal-event-presenter:   s-lc-ea-tpre;
+@libcal-event-time:        s-lc-ea-ttim;
+@libcal-event-title:       s-lc-ea-ttit;
+
+#api_month_cid@{calendar-id}_iid@{institution-id} {
+  table tr {
+    background-color: #fff;
+  }
+
+  p:last-child {
+    margin: 0;
+  }
+
+  .@{libcal-event} {
+    margin: 0 0 3em;
+  }
+
+  .@{libcal-table-heading},
+  .@{libcal-widget-heading},
+  .@{libcal-event-categories},
+  .@{libcal-event-presenter} {
+    display: none;
+  }
+
+  .@{libcal-event-title} > td {
+    font-weight: bold;
+    font-size: larger;
+  }
+
+  .@{libcal-event-date} {
+    padding: 0em 24px;
+  }
+}

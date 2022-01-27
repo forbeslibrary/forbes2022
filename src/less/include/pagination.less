@@ -1,0 +1,55 @@
+/**
+ * Pagination
+ * ============================================================================
+ */
+.page-n-of-m:first-of-type {
+  margin-top: 0;
+}
+
+.page-numbers,
+.post-page-numbers {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  min-width: 2.5em;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0.1em 0.1em 0.2em #0008;
+  text-decoration: none;
+
+  &.dots {
+    min-width: auto;
+    padding: 0.5em 0;
+    box-shadow: none;
+  }
+
+  &.current {
+    color: #fff;
+    background-color: @colors[forbes-red];
+  }
+}
+
+.pagination,
+.pagination-complete {
+  margin: 1em 0;
+  text-decoration: none;
+
+  .nav-links {
+    display: flex;
+    font-size: clamp(0.5rem, 3vw, 1em);
+    gap: 0.25em;
+    max-width: 30em;
+  }
+}
+
+.pagination .nav-links {
+  justify-content: space-between;
+}
+
+.pagination-complete .nav-links {
+  justify-content: start;
+}
+
+.page-links {
+  margin: 0.75em 0;
+  clear: both;
+}

@@ -1,0 +1,25 @@
+/**
+ * Layers - named z-index values
+ *
+ * The z-index CSS property sets the z-order of a positioned element and its
+ * descendants or flex items. Overlapping elements with a larger z-index cover
+ * those with a smaller one.
+ *
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/z-index
+ *
+ * In order to properly use z-index we must keep track of all the z-index values
+ * used throughout the project. For this reason we define all the z-index values
+ * here where they can easily be compared and changed as needed.
+ *
+ * Values makred EXTERNAL are not used by this theme but are included here for
+ * reference. They should not be changed.
+ */
+@layers: {
+  sticky-header:      1;
+  libraryh3lp:        5; /* for the chat widget button */
+  sub-menus:         10; /* drop down menus should not be obscured */
+  ui-front:         100; /* EXTERNAL: used by libraryh3lp for the popup */
+  admin-bar:      99999; /* EXTERNAL used by WordPress */
+  screen-reader: 100000; /* screen reader text, when shown */
+  focus:         100001; /* for elements with focus to improve accessibility */
+}

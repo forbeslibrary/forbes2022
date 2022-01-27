@@ -1,0 +1,23 @@
+/**
+ * Makes an element sticky while accounting for the WordPress admin bar if
+ * necessary.
+ *
+ * Arguments:
+ * - the dimension that would normally be given to the top property
+ */
+.position-sticky( @top: 0 ) {
+  position: sticky;
+  top: @top;
+
+  .admin-bar & {
+    top: calc(46px + @top);
+
+    @media screen and (min-width: 783px) {
+      top: calc(32px + @top);
+    }
+
+    @media screen and (max-width: 600px) {
+      top: @top;
+    }
+  }
+}

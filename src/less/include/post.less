@@ -1,0 +1,36 @@
+/**
+ * Posts
+ * ============================================================================
+ *
+ * Note that we are using 'post' in the broadest sense here. Pages, categories,
+ * and posts are all considered posts here.
+ */
+
+.post {
+  position: relative;
+}
+
+.post-date {
+  flex-basis: 100%;
+}
+
+.post-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 1em;
+  font-weight: 900;
+}
+
+.post-title {
+  margin-bottom: 0;
+  font-weight: 900;
+
+  /**
+   * When the post title imediately follows the breadcrumbs we elimate the top
+   * margin.
+   */
+  .breadcrumbs + & {
+    margin-top: 0;
+  }
+}

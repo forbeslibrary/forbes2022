@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ruleset name="Forbes2022">
+	<description>
+		Modifications to the WordPress Coding Standards for Forbes2022. See
+		https://github.com/WordPress/WordPress-Coding-Standards to learn more.
+	</description>
+	<rule ref="WordPress"/>
+	<rule ref="WordPress.Security.EscapeOutput">
+		<properties>
+			<property name="customEscapingFunctions" type="array">
+				<element value="get_breadcrumbs"/>
+				<element value="get_home_url_for_display"/>
+				<element value="get_page_number_display"/>
+				<element value="get_pagination"/>
+				<element value="sanitize_link_text"/>
+			</property>
+		</properties>
+	</rule>
+</ruleset>

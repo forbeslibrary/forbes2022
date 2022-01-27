@@ -1,0 +1,142 @@
+/**
+ * Dark Mode
+ * ============================================================================
+ *
+ * Modifications to the style sheet for folks who prefer dark mode. Please note
+ * that these changes need not be limited to changes of color.
+ *
+ * We have included as much of the dark mode styles here as we can while still
+ * keeping our code readable, but @media queries for dark mode may also appear
+ * in other files whenever including them here would result in confusing or
+ * difficult to read code.
+ */
+
+@media (prefers-color-scheme: dark) {
+  a:link,
+  a:visited {
+    color: @colors[bright-green];
+  }
+
+  a:hover {
+    color: #eee;
+  }
+
+  body {
+    background-color: #000;
+    color: #bbb;
+  }
+
+  code {
+    background-color: #006;
+    color: #ff6;
+  }
+
+  dt {
+    color: #d8d8d8;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #fff;
+  }
+
+  iframe {
+    background-color: white;
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  img {
+    opacity: 0.5;
+  }
+
+  input {
+    color: white;
+    background-color: #000;
+    border-color: #767676;
+  }
+
+  strong {
+    color: #eee;
+  }
+
+  var {
+    color: #fff;
+  }
+
+  .invert-in-dark-mode {
+    filter: invert(1);
+  }
+
+  .page-numbers {
+    box-shadow: none;
+    background-color: @colors[forbes-green];
+    color: #fff;
+
+    &:any-link {
+      color: #fff;
+    }
+
+    &.dots {
+      box-shadow: none;
+      background-color: #000;
+    }
+
+    &.current {
+      background-color: #222;
+    }
+  }
+
+  .search-results .post-title a {
+    color: @colors[bright-green];
+  }
+
+  .search-results .breadcrumbs {
+    color: #999;
+
+    a {
+      color: @colors[forbes-green];
+    }
+  }
+
+  /**
+   * Decorate sticky posts, so that they stand out.
+   */
+  .sticky {
+    border-top: solid #888 0.1em;
+    border-bottom: solid #888 0.1em;
+    padding: 0.75em 1.5em;
+    box-shadow: none;
+    background-color: #222;
+    margin-bottom: 1.5em;
+  }
+
+  .wp-caption-text,
+  figcaption {
+    color: inherit;
+  }
+
+  #header-logo {
+    filter: invert(1);
+  }
+
+  #page-header {
+    background-color: #000;
+  }
+
+  #search-results-header {
+    background-color: #000;
+  }
+
+  #wowbrary * {
+    background-color: black !important;
+  }
+
+  #wowbrary img[src^="//wowbrary.org"] {
+    opacity: 1;
+    filter: brightness(2.5) sepia(1) saturate(8) hue-rotate(112deg);
+  }
+}

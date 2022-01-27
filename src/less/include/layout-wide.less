@@ -1,0 +1,39 @@
+/**
+ * Layout - Wide
+ * ============================================================================
+ *
+ * Modifications to the layout for the widest screens.
+ */
+
+/**
+ * On the widest screens we set our font-size as a fraction of the available
+ * width to avoid very long lines and keep layout predicatble.
+ */
+:root {
+  --body-padding-vertical: 4rem;
+  --body-padding-horizontal: 6rem;
+  font-size: 1.3vw;
+}
+
+body {
+  display: grid;
+  grid-template-columns: fit-content(17em) minmax(0, 1fr) fit-content(17em);
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    "alerts alerts alerts"
+    "head head head"
+    "left main right"
+    "foot foot foot";
+}
+
+body > .widget-area-left {
+  grid-area: left;
+  margin: 1em 3em 0 0;
+  font-size: 75%;
+}
+
+body > .widget-area-right {
+  grid-area: right;
+  margin: 1em 0 0 3em;
+  font-size: 75%;
+}

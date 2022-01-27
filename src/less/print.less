@@ -1,0 +1,65 @@
+/**
+ * Print Styles
+ *
+ * These styles are include with a media query and will only be loaded when
+ * printing. These styles  are enqueued (and the breakpoint is set) in
+ * function.php in the register_styles() function.
+ */
+
+/**
+ * Some browsers have trouble picking sensible page breaks for display values
+ * other than 'block'.
+ */
+body,
+#page-footer {
+  display: block;
+}
+
+/**
+ * Hide elements that should not be printed.
+ */
+#alerts,
+#page-header,
+.no-print,
+.post-edit-link,
+.widget-area {
+  display: none;
+}
+
+/**
+ * Use black text on a white background.
+ *
+ * We opted for specificity instead of using !important here, so that folks can
+ * change text and background colors if they want without it being overridden.
+ */
+body,
+body.search-results,
+#page-footer {
+  &,
+  & a:any-link {
+    color: #000;
+    background-color: #fff;
+  }
+}
+
+/**
+ * Print the href attribute of web links.
+ */
+a[href^="http"]::after {
+  content: " (" attr(href) ") ";
+  font-weight: 400;
+  display: inline-block;
+  margin: 0 0 0 0.3em;
+  overflow-wrap: anywhere;
+
+  .wp-caption & {
+    font-size: 75%;
+  }
+}
+
+/**
+ * Remove the padding from the footer. (It looks strange in print.)
+ */
+#page-footer {
+  padding: 0;
+}

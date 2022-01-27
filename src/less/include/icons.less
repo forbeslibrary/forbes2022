@@ -1,0 +1,111 @@
+/**
+ * Icons
+ * ============================================================================
+ *
+ * We use the css spritemap technique to create many icons from a single image.
+ *
+ * To use these icons an element must include the class for the icon to be
+ * displayed (`icon-clock`, `icon-twitter`, etc.) as well as one of `icon` or
+ * `color-icon`. Using `icon` will give a monochrome icon, using the image as a
+ * mask, while `color-icon` will use the colors as given in the image.
+ *
+ * By default icons will be 1em in size, to match the size of the text. The
+ * `large-icon` class will double the size of the icon.
+ *
+ * The icon will always be placed before the element.
+ *
+ * Example: `<a class="icon-contact icon" href="#contact">Contact</a>`
+ */
+
+@import (reference) "utility/sprites.less";
+
+:root {
+  --sprite-image: data-uri("tmp/icons.min.svg");
+}
+
+.icon {
+  .make-sprite-class(
+    @image: var(--sprite-image);
+    @source-width: 192;
+    @sprite-size: 32;
+    @recolor: currentColor
+  );
+}
+
+.color-icon {
+  .make-sprite-class(
+    @image: var(--sprite-image);
+    @source-width: 192;
+    @sprite-size: 32;
+  );
+}
+
+.large-icon::before {
+  font-size: 2em;
+  margin: 0.1em;
+}
+
+.icon-facebook {
+  .choose-sprite(0, 0);
+}
+
+.icon-twitter {
+  .choose-sprite(1, 0);
+}
+
+.icon-instagram {
+  .choose-sprite(2, 0);
+}
+
+.icon-youtube {
+  .choose-sprite(3, 0);
+}
+
+.icon-flickr {
+  .choose-sprite(4, 0);
+}
+
+.icon-spotify {
+  .choose-sprite(5, 0);
+}
+
+.icon-clock {
+  .choose-sprite(0, 1);
+}
+
+.icon-univeral-design {
+  .choose-sprite(1, 1);
+}
+
+.icon-profile {
+  .choose-sprite(2, 1);
+}
+
+.icon-contact {
+  .choose-sprite(3, 1);
+
+  &::before {
+    font-size: 130%;
+  }
+}
+
+.icon-gift {
+  .choose-sprite(4,1);
+  vertical-align: text-bottom;
+}
+
+.icon-search {
+  .choose-sprite(5,1);
+}
+
+.icon-news {
+  .choose-sprite(0,2);
+}
+
+.icon-chat {
+  .choose-sprite(1,2);
+}
+
+.icon-chat-offline {
+  .choose-sprite(2,2);
+}

@@ -1,0 +1,69 @@
+/**
+ * Utilities for making sprite classes
+ *
+ * Author: Benjamin Kalish
+ *
+ * To make use of this file without unnessary output in your final css import it
+ *  with the reference option, i.e. `@import (reference) path/to/sprites.less`.
+ */
+
+/**
+ * Make Sprite Class
+ *
+ * This creates a class ready with an appropriate properties to use as a css
+ * sprite. Without any additional properties it will always show the first
+ * sprite in the file. You must use .choose-sprite() to select the other
+ * sprites.
+ *
+ * The sprites are assumed to be square and of uniform dimension.
+ *
+ * Arguments:
+ * - @image: the image of the sourcemap—this could be a url() or a data-uri. For
+ *   the @recolor option to work the image should have transparency.
+ * - @source-width: the width of the source image
+ * - @sprite-size: the width of one sprite in the source image
+ * - @recolor: if specified, the source image will be used only to determine the
+ *    icon shape and will be colored using the specified color
+ */
+.make-sprite-class(@image, @source-width, @sprite-size, @recolor: false) {
+  &::before {
+    content: "";
+    height: 1em;
+    width: 1em;
+    margin: 0.2em;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    & when (@recolor = false) {
+      background-image: @image;
+      background-repeat: no-repeat;
+      background-size: unit(@source-width ./ @sprite-size) * 1em;
+    }
+    & when not (@recolor = false) {
+      background-color: @recolor;
+      mask-image: @image;
+      mask-repeat: no-repeat;
+      mask-size: unit(@source-width ./ @sprite-size) * 1em;
+    }
+  }
+}
+
+/**
+ * Choose Sprite
+ *
+ * This class shifts the background-psoition and mask-position to select the
+ * specified sprite. The element should also have a class prepared with
+ * .make-sprite-class()
+ *
+ * Arguments:
+ * - @left: the column number in which the sprite is located (the leftmost
+ *    column is column 0)
+ * - @top: the row number in which the sprite is located (the topmost row is row
+ *    0)
+ */
+.choose-sprite(@left, @top) {
+  &::before {
+    background-position: -(@left * 1em) -(@top * 1em);
+    mask-position: -(@left * 1em) -(@top * 1em);
+  }
+}

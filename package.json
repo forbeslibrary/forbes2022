@@ -1,0 +1,38 @@
+{
+  "name": "forbes2022",
+  "version": "0.1.0",
+  "description": "A WordPress theme for Forbes Library. Note that this theme does not contain any code to diplay or style comments.",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forbeslibrary/forbes2022.git"
+  },
+  "author": "Benjamin Kalish",
+  "scripts": {
+    "clean": "node scripts/clean.js",
+    "lint": "npm run lint:js && npm run lint:php",
+    "lint:js": "npx eslint src/js",
+    "lint:php": "phpcs -s src/php/",
+    "build": "npm run clean && npm run build:svg && npm run build:css && npm run build:copy && npm run build:metadata",
+    "build:css": "node scripts/build-css.js",
+    "build:metadata": "node scripts/build-metadata.js",
+    "build:copy": "node scripts/build-copy.js",
+    "build:svg": "svgo src/less/svg/icons.svg -o tmp/icons.min.svg"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "cssnano": "^5.0.8",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "fs-extra": "^10.0.0",
+    "glob": "^7.2.0",
+    "less": "^4.1.2",
+    "mustache": "^4.2.0",
+    "postcss": "^8.3.9",
+    "postcss-cli": "^9.0.1",
+    "svgo": "^2.8.0"
+  }
+}

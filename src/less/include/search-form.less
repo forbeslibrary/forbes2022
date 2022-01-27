@@ -1,0 +1,57 @@
+/**
+ * Search Form
+ * ============================================================================
+ */
+
+.search-form {
+  display: grid;
+  grid-template-columns: auto 3em;
+  grid-template-areas:
+    "search button"
+    "options options";
+  max-width: 45em;
+
+  /**
+   * For when we display a search form in response to a 404 Not Found.
+   */
+  .error404 #main & {
+    padding: 0 0 2em 0;
+  }
+}
+
+.search-box {
+  font-size: 120%;
+  padding-left: 0.5em;
+  border-style: solid;
+  border-radius: 0;
+}
+
+.search-button {
+  font-size: 2em;
+  padding: 0;
+  border-radius: 0 1em 1em 0;
+  border: none;
+  text-indent: -0.2em; /* this makes the icon look better! */
+  color: white;
+  background-color: @colors[forbes-green];
+
+  @media (prefers-color-scheme: dark) {
+    color: #ddd; /* dim the icon slightly in dark mode */
+  }
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+}
+
+.search-options fieldset {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 1em 0 0;
+  border: none;
+}
+
+.advanced-search-link {
+  vertical-align: middle;
+  white-space: nowrap;
+}

@@ -1,0 +1,25 @@
+/**
+ * style-wide.less
+ *
+ * Styles for the largest displays. These styles are include with a media query
+ * and will only be loaded on devices with the largest displays. These styles
+ * are enqueued (and the breakpoint is set) in function.php in the
+ * register_styles() function.
+ */
+
+ /**
+  * Reference imports
+  *
+  * These files are imported using the reference option. As such, they produce
+  * no output, but the definitions and mixins they define are available for use.
+  */
+@import (reference) "include/_color-definitions.less";
+@import (reference) "include/_layers.less";
+
+/**
+ * We only have a few imports here since most styles are already loaded in
+ * styles.less.
+ */
+@import "include/layout-wide.less";
+@import "include/page-header-wide.less";
+@import "include/libraryh3lp-wide.less";

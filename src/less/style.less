@@ -1,0 +1,57 @@
+/**
+ * style.less
+ *
+ * This is the main style file. It will be loaded on all devices.
+ */
+
+/**
+ * Reference imports
+ *
+ * These files are imported using the reference option. As such, they produce
+ * no output, but the definitions and mixins they define are available for use.
+ */
+@import (reference) "include/_color-definitions.less";
+@import (reference) "include/_layers.less";
+
+/**
+ * noramlize.css
+ *
+ * Normalize.css makes browsers render all elements more consistently and in
+ * line with modern standards. It precisely targets only the styles that need
+ * normalizing.
+ *
+ * https://necolas.github.io/normalize.css/
+ */
+@import (inline) "include/utility/normalize.css";
+
+/**
+ * The bulk of our styles are defined in the following imports.
+ */
+@import "include/accessibility.less";
+@import "include/admin.less";
+@import "include/alerts.less";
+@import "include/base.less";
+@import "include/breadcrumbs.less";
+@import "include/colors.less";
+@import "include/empty-post.less";
+@import "include/icons.less";
+@import "include/layout.less";
+@import "include/libcal-events.less";
+@import "include/library-databases.less";
+@import "include/libraryh3lp.less";
+@import "include/menu.less";
+@import "include/page-footer.less";
+@import "include/page-header.less";
+@import "include/pagination.less";
+@import "include/post.less";
+@import "include/search-form.less";
+@import "include/search-results.less";
+@import "include/sidebars.less";
+@import "include/tags.less";
+@import "include/wp-styles.less";
+
+/**
+ * It is important that we include the dark mode styles last since they must not
+ * be overwritten by other styles.
+ */
+@import "include/dark-mode.less";

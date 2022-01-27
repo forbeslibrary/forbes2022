@@ -1,0 +1,121 @@
+/**
+ * Base Styles
+ * ============================================================================
+ *
+ * Here we will include basic styles that apply to elements regardless of class
+ * or ID.
+ *
+ * Please note that a number of styles applied to body element are also defined
+ * in the files related to layout.
+ */
+
+/**
+ * Ensure that sufficient space is include around radioboxes.
+ */
+[type="radio"] {
+  margin: 0.2em;
+}
+
+/**
+ * Asks browsers to remove the custom styling they add to these form elements.
+ * (Without this we will have trouble styling these on iPads and iPhones, among
+ * other devices.)
+ */
+[type="date"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="url"],
+[type="week"] {
+  appearance: none !important;
+}
+
+a:link,
+a:visited {
+  color: @colors[forbes-red];
+}
+
+a:hover {
+  color: @colors[forbes-green];
+}
+
+body {
+  font-family: Lato, Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #222;
+}
+
+code {
+  white-space: pre-wrap;
+  background-color: #111;
+  color: #eee;
+  padding: 0.1em;
+  border-radius: 0.2em;
+}
+
+dd {
+  margin-bottom: 0.5em;
+}
+
+dt {
+  font-weight: 700;
+}
+
+figcaption {
+  text-align: center;
+  margin-bottom: 1.5em;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  clear: none;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+img {
+  max-width: 100%; /* keep images from being wider than the screen */
+  height: auto; /* preserve aspect ratios */
+}
+
+main {
+  overflow-wrap: anywhere;
+}
+
+main :link {
+  font-weight: 700;
+}
+
+p {
+  margin: 1.5em 0;
+}
+
+pre {
+  overflow-x: auto;
+  width: 100%;
+}
+
+pre code {
+  display: inline-block;
+  padding: 1em;
+  white-space: pre;
+}
+
+select {
+  max-width: 100%;
+}
+
+var {
+  font-weight: 700;
+}
