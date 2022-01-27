@@ -12,6 +12,24 @@
 }
 
 /**
+ * The focus can "disapear" when the link is around a block level element. This
+ * fix addresses the most common cases of that, when the link contains a block
+ * level img.
+ *
+ * This solution isn't perfect, because sometimes too outlines will appear, but
+ * it seems better than nothing!
+ *
+ * Because the outline can still be hard to see in some instances we have also
+ * added a box shadow for emphasis.
+ */
+a:focus img:only-child {
+  outline: solid gold 2px;
+  box-shadow: 0 0 0.5em #0008;
+  z-index: @layers[focus];
+}
+
+
+/**
  * Use the pointer cursor for all buttons and labels.
  */
 button,
