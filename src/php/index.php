@@ -11,6 +11,7 @@
  * @package Forbes2022
  */
 
+use function ForbesLibrary\WordPress\Forbes2022\get_archive_breadcrumbs;
 use function ForbesLibrary\WordPress\Forbes2022\get_page_number_display;
 use function ForbesLibrary\WordPress\Forbes2022\get_pagination;
 
@@ -23,7 +24,8 @@ get_header();
 		<header>
 			<?php
 			if ( is_archive() ) {
-				echo '<h1>' . wp_kses_post( get_the_archive_title() ) . '</h1>';
+				echo get_archive_breadcrumbs();
+				the_archive_title('<h1 class="post-title">','</h1>');
 			}
 
 			if ( ! is_singular() ) {

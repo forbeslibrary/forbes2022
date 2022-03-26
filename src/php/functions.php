@@ -528,6 +528,23 @@ function get_breadcrumbs( $seperator = '→', $post = 0 ) : string {
 }
 
 /**
+ * Returns the breadcrumbs for an archive page.
+ *
+ * @param string $seperator The text to display between the link.
+ */
+function get_archive_breadcrumbs( $seperator = '→' ) : string {
+	$output = '';
+
+	$output .= '<div class="breadcrumbs">';
+	$output .= sprintf( '<a href="%s">Home</a>', get_home_url() );
+	$output .= $seperator;
+
+	$output .= sanitize_link_text( get_the_archive_title() );
+	$output .= '</div>';
+	return $output;
+}
+
+/**
  * Strips most HTML from a passed string, and returns the result, suitable for
  * use as link text.
  *
