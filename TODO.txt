@@ -1,7 +1,6 @@
 # To Do
 - profile php code to find bottlenecks
 - consider modernizr.js
-- Improve breadcrumbs on archive pages.
 
 # Resources
 - https://developer.wordpress.org/themes/getting-started/
