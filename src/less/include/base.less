@@ -124,14 +124,22 @@ td:first-child, th:first-child {
     border-left: none;
 }
 td, th {
-  border-left: thin solid #000;;
+  border-left: thin solid #000;
   padding-left: 0.5em;
   padding-right: 0.5em;
+
+  @media (prefers-color-scheme: dark) {
+    border-left: thin solid #bbb;
+  }
 }
 
 thead {
   border-bottom: thin solid #000;
   color: black;
+
+  @media (prefers-color-scheme: dark) {
+    border-bottom: thin solid #bbb;
+  }
 }
 
 var {
