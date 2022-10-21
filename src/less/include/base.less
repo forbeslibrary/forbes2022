@@ -37,11 +37,11 @@
 
 a:link,
 a:visited {
-  color: @colors[forbes-red];
+  color: @colors[forbes-green];
 }
 
 a:hover {
-  color: @colors[forbes-green];
+  color:@colors[hover-link-blue];
 }
 
 body {
@@ -81,8 +81,11 @@ figure {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   clear: none;
+  color: @colors[forbes-red];
 
   &:first-child {
     margin-top: 0;
