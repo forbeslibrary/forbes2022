@@ -28,13 +28,7 @@
 		echo '<h1 class="screen-reader-text">Forbes Library</h1>';
 	}
 	?>
-	<a
-		<?php
-		if ( ! is_front_page() ) {
-			echo 'href="' . esc_url( home_url() ) . '" title="Forbes Library Home" rel="home"';
-		}
-		?>
-	>
+	<a <?php echo 'href="' . esc_url( home_url() ) . '" title="Forbes Library Home" rel="home"'; ?>>
 		<img id="header-logo" width="533" height="110" alt="Home Page"
 			src="<?php echo esc_url( get_theme_file_uri( '/assets/img/forbes-logo-horizontal-cropped-533x110.png' ) ); ?>"
 			srcset = "
