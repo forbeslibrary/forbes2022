@@ -60,7 +60,7 @@
   padding: 0 1em 1em 1em;
   margin-top: 0;
   text-align: center;
-  font-size: 75%;
+  font-size: clamp( 70%, calc( 0.2in - 0.1vw ), 100% ); /* 75% on large screens, 100% on small screens, with a smooth and not too strange transition */
   font-style: italic;
   color: #333;
 }
