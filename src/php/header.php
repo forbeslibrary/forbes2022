@@ -20,6 +20,7 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<?php if ( is_404() ) { return; } ?>
 <?php get_template_part( 'template-parts/alerts' ); ?>
 <a href="#main" class="screen-reader-text">Skip to Content</a>
 <header id="page-header">
