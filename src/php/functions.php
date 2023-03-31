@@ -45,6 +45,7 @@ function theme_setup() : void {
 	add_theme_support( 'editor-gradient-presets', array() );
 	add_theme_support( 'editor-styles' );
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
+	add_theme_support( 'post-thumbnails' ); // we don't actually do much with post thumbnails, but we still allow them
 	add_theme_support( 'responsive-embeds' );
 	add_theme_support( 'title-tag' );
 
