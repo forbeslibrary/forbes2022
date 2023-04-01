@@ -8,7 +8,6 @@
 
 get_header();
 ?>
-<main id="main">
 	<h1 class="post-title">Error 404</h1>
 	Oh gosh! We cannot find that page!
 	<img id="image404"
@@ -20,6 +19,5 @@ get_header();
 		looking for, please <a href="http://forbeslibrary.org/info/contact/">contact&nbsp;us</a>.
 	</p>
 	<?php get_search_form(); ?>
-</main>
 <?php
 get_footer();

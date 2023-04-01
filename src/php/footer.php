@@ -9,9 +9,9 @@
 
 // Our sidebars appear just above the footer except for on larger screens where
 // we actually have room to position them on the sides.
-get_template_part( 'template-parts/sidebars' );
 ?>
-
+	</main><!-- .site-main -->
+	<?php get_template_part( 'template-parts/sidebars' ); ?>
 	<footer id="page-footer">
 		<div>
 			© Forbes Library<br>

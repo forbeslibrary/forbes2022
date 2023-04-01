@@ -16,45 +16,36 @@ use function ForbesLibrary\WordPress\Forbes2022\get_page_number_display;
 use function ForbesLibrary\WordPress\Forbes2022\get_pagination;
 
 get_header();
-?>
-
-	<main id="main" class="site-main">
-
-	<?php if ( is_archive() || ! is_singular() ) : ?>
-		<header>
-			<?php
-			if ( is_archive() ) {
-				echo get_archive_breadcrumbs();
-				the_archive_title('<h1 class="post-title">','</h1>');
-			}
-
-			if ( ! is_singular() ) {
-				the_archive_description();
-			}
-			?>
-		</header>
+if ( is_archive() || ! is_singular() ) : ?>
+	<header>
 		<?php
-	endif;
-
-	if ( have_posts() ) {
-		// Load posts loop.
-		while ( have_posts() ) {
-			the_post();
-			get_template_part( 'template-parts/content/content', get_post_type() );
+		if ( is_archive() ) {
+			echo get_archive_breadcrumbs();
+			the_archive_title('<h1 class="post-title">','</h1>');
 		}
-	} else {
 
-		// If no content, include the "No posts found" template.
-		get_template_part( 'template-parts/content/content', 'none' );
+		if ( ! is_singular() ) {
+			the_archive_description();
+		}
+		?>
+	</header>
+	<?php
+endif;
 
+if ( have_posts() ) {
+	// Load posts loop.
+	while ( have_posts() ) {
+		the_post();
+		get_template_part( 'template-parts/content/content', get_post_type() );
 	}
+} else {
 
-	if ( ! is_singular() ) {
-		echo get_pagination();
-	}
-	?>
+	// If no content, include the "No posts found" template.
+	get_template_part( 'template-parts/content/content', 'none' );
 
-	</main><!-- .site-main -->
+}
 
-<?php
+if ( ! is_singular() ) {
+	echo get_pagination();
+}
 get_footer();
