@@ -27,6 +27,7 @@
 			<a href="https://instagram.com/forbeslibrary?ref=badge" class="icon-instagram color-icon large-icon"><span class="screen-reader-text">Instagram: See our Pictures on Instragram Page</span></a>
 			<a href="https://open.spotify.com/user/f4gshqcfxfi37nwus12y334d6?si=Hwq0zuJ0Qi-D4YnFc8y-qA" class="icon-spotify color-icon large-icon"><span class="screen-reader-text">Spotify: Listen to our playlists</span></a>
 		</div>
+		<div><a href="https://forbeslibrary.org/espanol/">Español</a></div>
 	</footer>
 
 <?php get_template_part( 'template-parts/libraryh3lp' ); ?>
