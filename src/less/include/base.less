@@ -35,20 +35,21 @@
   appearance: none !important;
 }
 
-a:link,
-a:visited {
-  color: @colors[forbes-green];
+a:link {
+  color: @colors[forbes-coral];
+  font-weight:500;
 }
 
-a:hover {
-  color:@colors[hover-link-blue];
+a:visited, a:hover {
+  color:@colors[forbes-light-navy];
+  
 }
 
 body {
-  font-family: Lato, Helvetica, sans-serif;
+  font-family: 'Source Serif Pro', serif;
   line-height: 1.5;
   background-color: #fff;
-  color: #222;
+  color: @colors[forbes-navy];
 }
 
 code {
@@ -84,6 +85,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: Montserrat, sans-serif;
   clear: none;
   color: @colors[forbes-red];
 

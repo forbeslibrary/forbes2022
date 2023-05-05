@@ -17,16 +17,16 @@ class Google_Font {
 	/**
 	 * The font family.
 	 *
-	 * @var string $font_family The font family.
+	 * @var string[] $font_family An array of font family.
 	 */
 	private $font_family;
 
 	/**
 	 * A list of font styles and weights expressed as a comma seperated list.
 	 *
-	 * @see https://developers.google.com/fonts/docs/getting_started
+	 * @see https://developers.google.com/fonts/docs/css2
 	 *
-	 * @var string $font_styles The list of font styles.
+	 * @var string[] $font_styles An array of font style lists, one for each font family.
 	 */
 	private $font_styles;
 
@@ -38,8 +38,20 @@ class Google_Font {
 	 * @param string $font_styles A comma separated list of styles and weights.
 	 */
 	public function __construct( string $font_family, $font_styles ) {
-		$this->font_family = $font_family;
-		$this->font_styles = $font_styles;
+		$this->font_family = array( $font_family );
+		$this->font_styles = array( $font_styles );
+	}
+
+	/**
+	 * Adds a new font family to the Google Font object.
+	 * 
+	 * @param string $font_family the name of the font family, for example 'Lato'
+	 * or 'Droid Sans'.
+	 * @param string $font_styles A comma separated list of styles and weights.
+	 */
+	public function add_font_family( string $font_family, $font_styles ) {
+		$this->font_family[] = $font_family;
+		$this->font_styles[] = $font_styles;
 	}
 
 	/**
@@ -78,11 +90,22 @@ class Google_Font {
 	 * @return string The Google Fonts api url
 	 */
 	private function get_stylesheet_url() : string {
-		return 'https://fonts.googleapis.com/css?' . http_build_query(
-			array(
-				'family'  => $this->font_family . ':' . $this->font_styles,
-				'display' => 'swap',
-			)
-		);
+		$query_string = '';
+		$font_count = count($this->font_family);
+		for ($i = 0; $i < $font_count; $i++) {
+			$family = $this->font_family[$i];
+			$styles = $this->font_styles[$i];
+			$query_string .= http_build_query(
+				array(
+					'family'  => $family . ':' . $styles
+				)
+			);
+			if ($i + 1 < $font_count) {
+				$query_string .= '&';
+			} else {
+				$query_string .= '&display=swap';
+			}
+		}
+		return 'https://fonts.googleapis.com/css2?' . $query_string;
 	}
 }
