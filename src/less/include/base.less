@@ -35,14 +35,14 @@
   appearance: none !important;
 }
 
-a:link {
-  color: @colors[forbes-coral];
+a:link, a:visited {
+  color: @colors[forbes-dark-coral];
   font-weight:500;
 }
 
-a:visited, a:hover, a:focus {
-  color:@colors[forbes-light-navy];
-  
+a:hover, a:focus {
+  color:@colors[forbes-dark-coral];
+  filter: brightness(1.2)
 }
 
 body {
