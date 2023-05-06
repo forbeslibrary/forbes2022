@@ -32,13 +32,13 @@
 		echo '<h1 class="screen-reader-text">Forbes Library</h1>';
 	}
 	?>
-	<a <?php echo 'href="' . esc_url( home_url() ) . '" title="Forbes Library Home" rel="home"'; ?>>
+	<a id="header-home-link" <?php echo 'href="' . esc_url( home_url() ) . '" title="Forbes Library Home" rel="home"'; ?>>
 		<img id="header-logo" width="533" height="110" alt="Home Page"
 			src="<?php echo esc_url( get_theme_file_uri( '/assets/img/forbes-logo-horizontal-cropped-533x110.png' ) ); ?>"
 			srcset = "
-				<?php echo esc_url( get_theme_file_uri( '/assets/img/forbes-logo-horizontal-cropped-533x110.png' ) ); ?> 533w,
-				<?php echo esc_url( get_theme_file_uri( '/assets/img/forbes-logo-horizontal-cropped-1040x210.png' ) ); ?> 1040w,
-				<?php echo esc_url( get_theme_file_uri( '/assets/img/forbes-logo-horizontal-cropped-2080x420.png' ) ); ?> 2080w
+				<?php echo esc_url( get_theme_file_uri( '/assets/img/forbes-logo-339-110.png' ) ); ?> 339w,
+				<?php echo esc_url( get_theme_file_uri( '/assets/img/forbes-logo-648-210.png' ) ); ?> 648w,
+				<?php echo esc_url( get_theme_file_uri( '/assets/img/forbes-logo-1295-420.png' ) ); ?> 1295w
 			"
 			sizes="
 				(min-width: 70em) 50vw,

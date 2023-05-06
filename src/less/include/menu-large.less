@@ -54,9 +54,17 @@
 
     &:hover,
     &:focus-within {
-      background-color: @colors[forbes-coral];
+      color: @colors[forbes-navy];
+      &>:any-link {
+        color: @colors[forbes-navy];
+      }
+      background-color: #ffffff;
 
       @media (prefers-color-scheme: dark) {
+        color: #ffffff;
+        &>:any-link {
+          color: #ffffff;;
+        }
         background-color: #555;
       }
     }
@@ -87,7 +95,7 @@
       box-shadow: none;
     }
 
-    background-color: @colors[forbes-dark-coral];
+    background-color: @colors[forbes-navy];
 
     @media (prefers-color-scheme: dark) {
       background-color: #222;
