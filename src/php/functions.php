@@ -14,8 +14,8 @@ namespace ForbesLibrary\WordPress\Forbes2022;
 
 require_once 'class-google-font.php';
 use ForbesLibrary\WordPress\Forbes2022\Google_font;
-$google_fonts = new Google_font( 'Source Serif Pro', 'ital,wght@0,400;0,700;1,400;1,700' );
-$google_fonts->add_font_family( 'Montserrat', 'ital,wght@0,200..900;1,200..900' );
+$google_fonts = new Google_font( 'Source Serif Pro', 'ital,wght@0,400;0,600;0,700;1,400;1,600;1,700' );
+$google_fonts->add_font_family( 'Montserrat', 'ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900' );
 $google_fonts->register_hooks();
 
 /**
