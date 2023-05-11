@@ -25,6 +25,9 @@
   border-style: solid;
   border-color: @colors[forbes-dark-coral];
   border-radius: 0;
+  @media (prefers-color-scheme: dark) {
+    border-color: @colors[forbes-coral];
+  }
 }
 
 .search-button {
@@ -33,11 +36,12 @@
   border-radius: 0 1em 1em 0;
   border: none;
   text-indent: -0.2em; /* this makes the icon look better! */
-  color: white;
+  color: #ffffff;
   background-color: @colors[forbes-dark-coral];
 
   @media (prefers-color-scheme: dark) {
-    color: #ddd; /* dim the icon slightly in dark mode */
+    background-color: @colors[forbes-coral];
+    color: #000; /* dim the icon slightly in dark mode */
   }
 
   &:hover {
