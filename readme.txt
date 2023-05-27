@@ -31,7 +31,7 @@ The `package.json` file includes a number of scripts to help with this process. 
 3. Run `npm install` to install the theme's dependencies
 
 Now you can run `npm run build` to build the theme–it will appear in a new
-directory called `build`.
+directory called `build` and a zipped version will be created called `forbes2022.zip`.
 
 The scripts you will likely use most often are:
 
