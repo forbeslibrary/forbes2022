@@ -15,7 +15,7 @@ use function ForbesLibrary\WordPress\Forbes2022\get_search_preference;
 $form_id           = new Unique_ID( 'search-form-' );
 $search_preference = get_search_preference();
 ?>
-<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url() ); ?>">
+<form role="search" aria-label="Website and Catalog" method="get" class="search-form" action="<?php echo esc_url( home_url() ); ?>">
 	<label class="screen-reader-text" for="<?php $form_id->echo(); ?>-input">Search for:</label>
 	<input class="search-box" id="<?php $form_id->echo(); ?>-input" type="search" value="<?php echo get_search_query(); ?>" name="s" required>
 	<button class="search-button"><span class="icon-search icon"><span class="screen-reader-text">Search</span></span></button>
