@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 /**
- * Process .less files and and pass the result the posscss.
+ * Process .less files and and pass the result to PostCSS.
+ * 
+ * PostCSS adds vendor prefixes to CSS rules. See https://postcss.org/
  */
 
 const autoprefixer = require('autoprefixer');

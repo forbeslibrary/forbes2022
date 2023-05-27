@@ -2,7 +2,7 @@
 /**
  * Copies files to the build directory.
  *
- * No actual building is required for some files, sowe just copy them to the
+ * No actual building is required for some files, so we just copy them to the
  * build directory as is.
  */
 

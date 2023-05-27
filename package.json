@@ -13,13 +13,15 @@
     "lint": "npm run lint:js && npm run lint:php",
     "lint:js": "npx eslint src/js",
     "lint:php": "phpcs -s src/php/",
-    "build": "npm run clean && npm run build:svg && npm run build:css && npm run build:copy && npm run build:metadata",
+    "build": "npm run clean && npm run build:svg && npm run build:css && npm run build:copy && npm run build:metadata && npm run build:zip",
     "build:css": "node scripts/build-css.js",
     "build:metadata": "node scripts/build-metadata.js",
     "build:copy": "node scripts/build-copy.js",
+    "build:zip": "node scripts/build-zip.js",
     "build:svg": "svgo src/less/svg/icons.svg -o tmp/icons.min.svg"
   },
   "devDependencies": {
+    "archiver": "^5.3.1",
     "autoprefixer": "^10.3.7",
     "cssnano": "^5.0.8",
     "eslint": "^7.32.0",
