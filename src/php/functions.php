@@ -150,7 +150,6 @@ add_action( 'widgets_init', __NAMESPACE__ . '\register_sidebars' );
  */
 function register_sidebars() : void {
 	$common_sidebar_attributes = array(
-		'before_sidebar' => '<aside id="%1$s" class="%2$s">',
 		'after_sidebar'  => '</aside>',
 		'before_widget'  => '<section id="%1$s" class="%2$s">',
 		'after_widget'   => '</section>',
@@ -162,6 +161,7 @@ function register_sidebars() : void {
 		array_merge(
 			$common_sidebar_attributes,
 			array(
+				'before_sidebar' => '<aside id="%1$s" class="%2$s" aria-label="Home Page Sidebar 1">',
 				'name'        => 'Home Page Widget Area 1',
 				'id'          => 'main-page-widget-area-1',
 				'class'       => 'widget-area widget-area-left',
@@ -174,6 +174,7 @@ function register_sidebars() : void {
 		array_merge(
 			$common_sidebar_attributes,
 			array(
+				'before_sidebar' => '<aside id="%1$s" class="%2$s" aria-label="Home Page Sidebar 2">',
 				'name'        => 'Home Page Widget Area 2',
 				'id'          => 'main-page-widget-area-2',
 				'class'       => 'widget-area widget-area-right',
@@ -186,6 +187,7 @@ function register_sidebars() : void {
 		array_merge(
 			$common_sidebar_attributes,
 			array(
+				'before_sidebar' => '<aside id="%1$s" class="%2$s" aria-label="Coolidge Sidebar">',
 				'name'        => 'Coolidge Widget Area',
 				'id'          => 'coolidge-widget-area',
 				'class'       => 'widget-area widget-area-right',
@@ -198,6 +200,7 @@ function register_sidebars() : void {
 		array_merge(
 			$common_sidebar_attributes,
 			array(
+				'before_sidebar' => '<aside id="%1$s" class="%2$s" aria-label="Events Sidebar">',
 				'name'        => 'Events Widget Area',
 				'id'          => 'events-widget-area',
 				'class'       => 'widget-area widget-area-right',
