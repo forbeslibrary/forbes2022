@@ -12,7 +12,7 @@
 ?>
 	</main><!-- .site-main -->
 	<?php get_template_part( 'template-parts/sidebars' ); ?>
-	<footer id="page-footer">
+	<footer id="page-footer" aria-label="Footer">
 		<div>
 			© Forbes Library<br>
 			20 West St., Northampton MA 01060 | Phone: <a href="tel:+1-413-587-1011">413-587-1011</a> | text/SMS: <a href="sms:+1-413‑570‑0444">413‑570‑0444</a><br>
