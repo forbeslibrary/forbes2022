@@ -15,6 +15,11 @@
  * The icon will always be placed before the element.
  *
  * Example: `<a class="icon-contact icon" href="#contact">Contact</a>`
+ *
+ * As a special case, if these elements are used on an element with the class
+ * `wp-block-post-title` we modify the size of the child to prevent the awkward
+ * line break that might otherwise occur. This is necessary because the block
+ * editor makes it easy to set the class on container but not on the content.
  */
 
 @import (reference) "utility/sprites.less";
@@ -32,6 +37,11 @@
   );
 }
 
+.icon.wp-block-post-title :only-child {
+  width: calc(100% - 2.2em);
+  vertical-align: top;
+}
+
 .color-icon {
   .make-sprite-class(
     @image: var(--sprite-image);
@@ -44,6 +54,12 @@
   font-size: 2em;
   margin: 0.1em;
 }
+
+.large-icon.wp-block-post-title :only-child {
+  width: calc(100% - 2.4em);
+  vertical-align: top;
+}
+
 
 .icon-facebook {
   .choose-sprite(0, 0);
