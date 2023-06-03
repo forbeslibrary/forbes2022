@@ -79,11 +79,11 @@
 
   .page-numbers {
     box-shadow: none;
-    background-color: @colors[forbes-green];
+    background-color: @colors[forbes-coral];
     color: #fff;
 
     &:any-link {
-      color: #fff;
+      color: #000;
     }
 
     &.dots {
@@ -92,20 +92,20 @@
     }
 
     &.current {
-      background-color: #222;
+      color: #fff;
+      background-color: #333;
     }
   }
 
   .search-results .post-title a {
     color: @colors[sky-blue];
+    &:hover {
+      color: @colors[hover-sky-blue];
+    }
   }
 
   .search-results .breadcrumbs {
     color: #999;
-
-    a {
-      color: @colors[sky-blue];
-    }
   }
 
   /**
