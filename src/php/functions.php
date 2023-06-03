@@ -508,7 +508,7 @@ function get_breadcrumbs( $seperator = '→', $post = 0 ) : string {
 	$post   = get_post( $post );
 	$output = '';
 
-	$output .= '<div class="breadcrumbs">';
+	$output .= '<nav aria-label="Breadcrumb" class="breadcrumbs">';
 	$output .= sprintf( '<a href="%s">Home</a>', get_home_url() );
 	$output .= $seperator;
 
@@ -527,8 +527,8 @@ function get_breadcrumbs( $seperator = '→', $post = 0 ) : string {
 		$output .= sprintf( '<a href="%s">%s</a>', get_category_link( $category->term_id ), $category->name );
 		$output .= $seperator;
 	}
-	$output .= sanitize_link_text( get_the_title( $post ) );
-	$output .= '</div>';
+	$output .= sprintf( '<span aria-current="page">%s</span>', sanitize_link_text( get_the_title( $post ) ) );
+	$output .= '</nav>';
 	return $output;
 }
 
