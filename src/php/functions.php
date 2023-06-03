@@ -450,6 +450,7 @@ function get_pagination() : string {
 	}
 	$pagination_options = array(
 		'screen_reader_text' => 'Page Navigation',
+		'aria_label'         => 'Page',
 		'prev_text'          => '←<span class="screen-reader-text">Previous"</span>',
 		'next_text'          => '→<span class="screen-reader-text">Next"</span>',
 		'before_page_number' => '<span class="screen-reader-text">Page"</span>',
