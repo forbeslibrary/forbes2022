@@ -22,10 +22,9 @@
 		<nav aria-label="Social Media" class="social-links no-print">
 			<h2 class="screen-reader-text">Find Us On Social Media</h2>
 			<a href="https://www.facebook.com/Forbes.Library" class="icon-facebook color-icon large-icon"><span class="screen-reader-text">Facebook: Like us!</span></a>
-			<a href="https://twitter.com/ForbesLibrary" class="icon-twitter color-icon large-icon"><span class="screen-reader-text">Twitter: Follow us!</span></a>
+			<a href="https://instagram.com/forbeslibrary?ref=badge" class="icon-instagram color-icon large-icon"><span class="screen-reader-text">Instagram: See our Pictures on Instragram Page</span></a>
 			<a href="https://www.flickr.com/photos/forbeslibrary/" class="icon-flickr color-icon large-icon"><span class="screen-reader-text">Flickr: See our photostream</span></a>
 			<a href="https://www.youtube.com/user/ForbesLibrary" class="icon-youtube color-icon large-icon"><span class="screen-reader-text">YouTube: See our promotions and videos of our programs on our YouTube channel</span></a>
-			<a href="https://instagram.com/forbeslibrary?ref=badge" class="icon-instagram color-icon large-icon"><span class="screen-reader-text">Instagram: See our Pictures on Instragram Page</span></a>
 			<a href="https://open.spotify.com/user/f4gshqcfxfi37nwus12y334d6?si=Hwq0zuJ0Qi-D4YnFc8y-qA" class="icon-spotify color-icon large-icon"><span class="screen-reader-text">Spotify: Listen to our playlists</span></a>
 		</nav>
 		<div><a href="https://forbeslibrary.org/espanol/">Español</a></div>
