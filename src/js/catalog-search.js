@@ -20,7 +20,7 @@
     var searchOptionWebsite = searchForm.querySelector('.search-website');
     var catalogScope = searchForm.querySelector('.catalog-scope');
     var searchWebsiteAction = searchForm.getAttribute('action');
-    var searchCatalogAction = 'https://northamptn.cwmars.org/eg/opac/results';
+    var searchCatalogAction = 'https://bark.cwmars.org/eg/opac/results';
 
     if (!(searchOptionCatalog && searchOptionWebsite)) {
       return; // if this form has no search options skip to the next form

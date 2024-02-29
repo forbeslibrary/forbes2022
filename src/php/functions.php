@@ -375,7 +375,7 @@ function search_redirect() : void {
 		$atts['query'] = $atts['s'];
 		unset( $atts['s'] );
 		unset( $atts['search-target'] );
-		header( 'Location: https://northamptn.cwmars.org/eg/opac/results?' . http_build_query( $atts ) );
+		header( 'Location: https://bark.cwmars.org/eg/opac/results?' . http_build_query( $atts ) );
 		exit();
 	}
 }
