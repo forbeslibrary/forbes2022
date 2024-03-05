@@ -20,7 +20,7 @@
     var searchOptionWebsite = searchForm.querySelector('.search-website');
     var catalogScope = searchForm.querySelector('.catalog-scope');
     var searchWebsiteAction = searchForm.getAttribute('action');
-    var searchCatalogAction = 'https://bark.cwmars.org/eg/opac/results';
+    var searchCatalogAction = 'https://northamptn.cwmars.org/Union/Search';
 
     if (!(searchOptionCatalog && searchOptionWebsite)) {
       return; // if this form has no search options skip to the next form
@@ -52,7 +52,7 @@
       searchOptionWebsite.checked = false;
       catalogScope.disabled = false;
       searchBox.setAttribute('placeholder', 'search catalog (books, movies, music, and more...)');
-      searchBox.setAttribute('name', 'query');
+      searchBox.setAttribute('name', 'lookfor');
       searchForm.setAttribute('action', searchCatalogAction);
       document.cookie = 'forbes-search-preference=catalog; path=/; max-age=31536000';
     }

@@ -30,5 +30,5 @@ $search_preference = get_search_preference();
 			Catalog
 		</label>
 	</fieldset>
-	<input id="<?php $form_id->echo(); ?>-catalog-scope" class="catalog-scope" type="hidden" name="locg" value="1">
+	<input id="<?php $form_id->echo(); ?>-catalog-scope" class="catalog-scope" type="hidden" name="filter[]" value='availability_toggle:"global"'>
 </form>

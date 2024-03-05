@@ -372,10 +372,10 @@ function search_redirect() : void {
 		// phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 		parse_str( $_SERVER['QUERY_STRING'], $atts );
 		// phpcs:enable
-		$atts['query'] = $atts['s'];
+		$atts['lookfor'] = $atts['s'];
 		unset( $atts['s'] );
 		unset( $atts['search-target'] );
-		header( 'Location: https://bark.cwmars.org/eg/opac/results?' . http_build_query( $atts ) );
+		header( 'Location: https://northamptn.cwmars.org/Union/Search?' . http_build_query( $atts ) );
 		exit();
 	}
 }

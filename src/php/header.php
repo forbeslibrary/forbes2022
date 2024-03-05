@@ -65,7 +65,7 @@
 	</a>
 	<div id="quick-navigation">
 		<nav id="quick-navigation-links" aria-label="Top Links">
-			<a class="my-account icon-profile icon" href="https://bark.cwmars.org/eg/opac/login" title="Use your CW MARS account to place holds, check due dates, etc.">My Account</a>
+			<a class="my-account icon-profile icon" href="https://northamptn.cwmars.org/MyAccount/Home" title="Use your CW MARS account to place holds, check due dates, etc.">My Account</a>
 			<a class="accessibility icon-univeral-design icon" href="https://forbeslibrary.org/accessibility/" title="Library Accessibility Information">Accessibility</a>
 			<a class="hours icon-clock icon" href="https://forbeslibrary.org/info/hours/" title="Library Hours">Hours</a>
 			<a class="contact icon-contact icon" href="https://forbeslibrary.org/info/contact/" title="Contact the Library">Contact</a>
