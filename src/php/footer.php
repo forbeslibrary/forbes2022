@@ -30,7 +30,6 @@
 		<div><a href="https://forbeslibrary.org/espanol/">Español</a></div>
 	</footer>
 
-<?php get_template_part( 'template-parts/libraryh3lp' ); ?>
 <?php wp_footer(); ?>
 
 </body>

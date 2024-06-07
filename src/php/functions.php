@@ -116,14 +116,6 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\register_scripts' );
 function register_scripts() : void {
 
 	wp_enqueue_script(
-		'libraryh3lp',
-		get_theme_file_uri( '/assets/js/forbes2022-libraryh3lp.js' ),
-		array(), // No dependencies.
-		get_theme_version(),
-		true // Put in footer.
-	);
-
-	wp_enqueue_script(
 		'accessibility',
 		get_theme_file_uri( '/assets/js/accessibility.js' ),
 		array(), // No dependencies.
