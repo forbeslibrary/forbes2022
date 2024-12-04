@@ -23,11 +23,11 @@
 @libcal-event:             s-lc-ea-tb;
 @libcal-event-categories:  s-lc-ea-tcat;
 @libcal-event-description: s-lc-ea-tdes;
-@libcal-event-date:        s-lc-ea-tdat;
 @libcal-event-location:    s-lc-ea-tloc;
 @libcal-event-presenter:   s-lc-ea-tpre;
-@libcal-event-time:        s-lc-ea-ttim;
 @libcal-event-title:       s-lc-ea-ttit;
+@libcal-event-start:       s-lc-ea-from;
+@libcal-event-end:         s-lc-ea-to;
 
 #api_month_cid@{calendar-id}_iid@{institution-id} {
   p:last-child {
@@ -42,7 +42,8 @@
   .@{libcal-table-heading},
   .@{libcal-widget-heading},
   .@{libcal-event-categories},
-  .@{libcal-event-presenter} {
+  .@{libcal-event-presenter},
+  .@{libcal-event-end} {
     display: none;
   }
 
@@ -51,7 +52,7 @@
     font-size: larger;
   }
 
-  .@{libcal-event-date} {
+  .@{libcal-event-start} {
     padding: 0em 24px;
   }
 }
