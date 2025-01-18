@@ -19,7 +19,7 @@ $query = new WP_Query(
 );
 
 if ( $query->have_posts() ) {
-	echo '<aside role="alert" id="alerts">';
+	echo '<aside id="alerts">';
 	while ( $query->have_posts() ) {
 		$query->the_post();
 		$content_array = get_extended( $post->post_content );
