@@ -34,7 +34,19 @@
 	?>
 	<a id="header-home-link" <?php echo 'href="' . esc_url( home_url() ) . '" title="Forbes Library Home" rel="home"'; ?>>
 		<picture id="header-logo">
-			<source media="(prefers-color-scheme: dark)"
+		<source media="(prefers-color-scheme: dark)" type="image/webp"
+				srcset = "
+					<?php echo esc_url( get_theme_file_uri( '/assets/img/forbes-logo-dark-mode-375-110.webp' ) ); ?> 375w,
+					<?php echo esc_url( get_theme_file_uri( '/assets/img/forbes-logo-dark-mode-751-220.webp' ) ); ?> 751w,
+					<?php echo esc_url( get_theme_file_uri( '/assets/img/forbes-logo-dark-mode-1502-440.webp' ) ); ?> 1502w
+				"
+				sizes="
+					(min-width: 70em) 50vw,
+					(min-width: 50em) 751px,
+					100vw
+				"
+			>
+			<source media="(prefers-color-scheme: dark)" type="image/png"
 				srcset = "
 					<?php echo esc_url( get_theme_file_uri( '/assets/img/forbes-logo-dark-mode-375-110.png' ) ); ?> 375w,
 					<?php echo esc_url( get_theme_file_uri( '/assets/img/forbes-logo-dark-mode-751-220.png' ) ); ?> 751w,
@@ -46,7 +58,19 @@
 					100vw
 				"
 			>
-			<source media="(prefers-color-scheme: light)"
+			<source media="(prefers-color-scheme: light)" type="image/webp"
+				srcset = "
+					<?php echo esc_url( get_theme_file_uri( '/assets/img/forbes-logo-375-110.webp' ) ); ?> 375w,
+					<?php echo esc_url( get_theme_file_uri( '/assets/img/forbes-logo-751-220.webp' ) ); ?> 751w,
+					<?php echo esc_url( get_theme_file_uri( '/assets/img/forbes-logo-1502-440.webp' ) ); ?> 1502w
+				"
+				sizes="
+					(min-width: 70em) 50vw,
+					(min-width: 50em) 751px,
+					100vw
+				"
+			>
+			<source media="(prefers-color-scheme: light)" type="image/png"
 				srcset = "
 					<?php echo esc_url( get_theme_file_uri( '/assets/img/forbes-logo-375-110.png' ) ); ?> 375w,
 					<?php echo esc_url( get_theme_file_uri( '/assets/img/forbes-logo-751-220.png' ) ); ?> 751w,
