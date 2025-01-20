@@ -41,7 +41,12 @@ a:link, a:visited {
 
 a:hover, a:focus {
   color:@colors[forbes-dark-coral];
-  filter: brightness(1.2)
+  filter: brightness(1.2);
+
+  /* But do not brighten images! */
+  img {
+    filter: brightness(0.83);
+  }
 }
 
 body {
