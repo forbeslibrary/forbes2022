@@ -73,10 +73,6 @@
     color: #fff;
   }
 
-  .invert-in-dark-mode {
-    filter: invert(1);
-  }
-
   .page-numbers {
     box-shadow: none;
     background-color: @colors[forbes-coral];
@@ -126,8 +122,7 @@
   }
 
   #header-logo,
-  #header-logo img,
-  .dark-mode-safe img {
+  #header-logo img {
     filter: brightness(1);
   }
 
@@ -146,5 +141,18 @@
   #wowbrary img[src^="//wowbrary.org"] {
     opacity: 1;
     filter: brightness(2.5) sepia(1) saturate(8) hue-rotate(112deg);
+  }
+
+  /* Public classes
+   * These classes are intended to be used by editors to modify the appearence * of images in dark mode.
+   */
+  .dark-mode-safe img {
+    filter: brightness(1);
+  }
+  .invert-in-dark-mode img {
+    filter: invert(1);
+  }
+  .white-background-in-dark-mode img {
+    background: #fff;
   }
 }

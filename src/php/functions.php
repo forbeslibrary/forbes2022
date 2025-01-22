@@ -425,6 +425,43 @@ function filter_title( $title, $id ) {
 }
 
 /**
+ * Hooks into WordPress to add widgets to the dashboard
+ */
+add_action( 'wp_dashboard_setup', __NAMESPACE__ . '\add_dashboard_widgets' );
+
+/**
+ * Adds dashboard widgets
+ */
+function add_dashboard_widgets() {
+	wp_add_dashboard_widget(
+		'forbes2022-documentation-dashboard-widget',
+		'Forbes2022',
+		__NAMESPACE__ . '\output_documentation_widget_content',
+		null,
+		null,
+		'normal',
+		'high'
+	);
+}
+
+/**
+ * Outputs the contents of the documentation widget
+ */
+function output_documentation_widget_content( $post, $callback_args ) {
+	echo <<<'END'
+	<p>You are running the theme Forbes2022.</p>
+	<p>The following classes can be added to image blocks to modify their appearance:
+		<ul>
+			<li><code>dark-mode-safe</code> Normally images are dimmed slightly in dark mode. Add this class to prevent that behavior.</li>
+			<li><code>invert-in-dark-mode</code> If an image consists of black text or linework on a white background inverting it in dark mode may create an acceptable dark mode version.</li>
+			<li><code>white-background-in-dark-mode</code> Images that use transperancy and were designed with a white background in mind generally read very poorly in dark mode. This class forces a white background.</li>
+		</ul>
+		To add a class select “Advanced” in the block settings and add the class name in the box labeled “Additional CSS Class(es)“.
+	</p>
+	END;
+}
+
+/**
  * Returns the pagination
  *
  * We use WordPress's get_the_posts_pagination() except:
